@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+    <header><h1 class="text-center">{{ .Title }}</h1></header>
+    <h6 class="text-center text-muted mb-5">
+        <time>{{ .Date.Format "January 2, 2006" }}</time> |
+        {{range .Params.tags}}
+            <a href="/tags/{{ . }}"> #{{ . }} </a>
+        {{ end }}
+    </h6>
+    <section>
+        {{.Content}}
+    </section>
+</article>
+{{ end }}
