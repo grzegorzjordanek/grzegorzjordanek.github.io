@@ -1,0 +1,14 @@
+<article class="mb-5">
+    <section>
+        <header><h2>{{ .Title }}</h2></header>
+        <h6 class="text-muted mb-3">
+            <time>{{ .Date.Format "January 2, 2022" }}</time> |
+            {{range .Params.tags}}
+                <a class="text-muted text-decoration-none" href="/tags/{{ . }}"> #{{ . }} </a>
+            {{ end }}
+        </h6>
+    </section>
+    <section>
+        {{.Summary}}
+    </section>
+</article>
