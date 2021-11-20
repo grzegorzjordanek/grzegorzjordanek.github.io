@@ -1,8 +1,6 @@
 {{ define "main" }}
 {{ .Content }}
-<section>
     {{ range first 5 .Site.RegularPages }}
-    {{ partial "summary.html" .}}
+    {{ partial "summary.html" . }}
     {{ end }}
-</section>
 {{ end }}
